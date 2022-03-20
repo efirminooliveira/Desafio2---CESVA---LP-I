@@ -1,16 +1,9 @@
 package Desafios.Desafio2.src.models;
 
-public class Cliente {
-    private String nome;
-    private String cpf;
-    private String telefone;
-    private String email;
+public class Cliente extends Pessoa {
 
-    public Cliente(String nome, String cpf, String telefone, String email){
-        this.nome  = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.email = email;
+    public Cliente(String nome, String cpf, String telefone, String eMail) {
+        super(nome, cpf, telefone, eMail);
     }
 
     public String getNome() {
@@ -35,11 +28,11 @@ public class Cliente {
     }
 
     public String getEmail() {
-        return email;
+        return eMail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String eMail) {
+        this.eMail = eMail;
     }
     
 }

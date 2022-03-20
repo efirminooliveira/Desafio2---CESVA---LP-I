@@ -1,17 +1,11 @@
 package Desafios.Desafio2.src.models;
 
-public class Vendedor {
-    private String nome;
-    private String cpf;
-    private String telefone;
-    private String email;
+public class Vendedor extends Pessoa{
+
     private Double percentualComissao;
 
-    public Vendedor(String nome, String cpf, String telefone, String email){
-        this.nome  = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.email = email;
+    public Vendedor(String nome, String cpf, String telefone, String eMail) {
+        super(nome, cpf, telefone, eMail);
         this.percentualComissao = 0.05;
     }
 
@@ -41,10 +35,10 @@ public class Vendedor {
     }
 
     public String getEmail() {
-        return email;
+        return eMail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String eMail) {
+        this.eMail = eMail;
     }
 }

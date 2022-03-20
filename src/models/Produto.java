@@ -10,10 +10,10 @@ public class Produto {
 
     public Produto(String nome, Integer quantidade, Double valorUnitario, Double valorDesconto, Double valorAcrescimo) {
         this.nome = nome;
-        this.setQuantidade(quantidade);
-        this.setValorUnitario(valorUnitario);
-        this.setValorDesconto(valorDesconto);
-        this.setValorAcrescimo(valorAcrescimo);
+        this.quantidade = quantidade;
+        this.valorUnitario = valorUnitario;
+        this.valorDesconto = valorDesconto;
+        this.valorAcrescimo = valorAcrescimo;
         this.valorTotal = (valorUnitario*quantidade) + valorAcrescimo - valorDesconto;
     }
 
@@ -62,6 +62,6 @@ public class Produto {
     }
 
     public void atualizarValorTotalProduto(){
-        this.valorTotal = (this.valorUnitario*this.quantidade) + this.valorAcrescimo - this.valorDesconto;
+        this.valorTotal = (valorUnitario*quantidade) + valorAcrescimo - valorDesconto;
     }
 }
