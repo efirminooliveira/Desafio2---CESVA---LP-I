@@ -17,12 +17,17 @@ public class Produto {
         this.valorTotal = (valorUnitario*quantidade) + valorAcrescimo - valorDesconto;
     }
 
+    public String getNome(){
+        return nome;
+    }
+
     public Double getValorAcrescimo() {
         return valorAcrescimo;
     }
 
     public void setValorAcrescimo(Double valorAcrescimo) {
         this.valorAcrescimo = valorAcrescimo;
+        atualizarValorTotalProduto();
     }
 
     public Double getValorDesconto() {
@@ -31,6 +36,7 @@ public class Produto {
 
     public void setValorDesconto(Double valorDesconto) {
         this.valorDesconto = valorDesconto;
+        atualizarValorTotalProduto();
     }
 
     public Double getValorUnitario() {
@@ -39,6 +45,7 @@ public class Produto {
 
     public void setValorUnitario(Double valorUnitario) {
         this.valorUnitario = valorUnitario;
+        atualizarValorTotalProduto();
     }
 
     public Integer getQuantidade() {
@@ -47,9 +54,14 @@ public class Produto {
 
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
+        atualizarValorTotalProduto();
     }
 
     public Double getValorTotal() {
         return valorTotal;
+    }
+
+    public void atualizarValorTotalProduto(){
+        this.valorTotal = (this.valorUnitario*this.quantidade) + this.valorAcrescimo - this.valorDesconto;
     }
 }

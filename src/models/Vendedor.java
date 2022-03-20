@@ -12,6 +12,11 @@ public class Vendedor {
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
+        this.percentualComissao = 0.05;
+    }
+
+    public Double getPercentualComissao(){
+        return percentualComissao;
     }
 
     public String getNome() {
